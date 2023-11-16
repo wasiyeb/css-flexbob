@@ -1,0 +1,152 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* CSS Styling starts here */
+.flex-container {
+    border: solid black 1px;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    align-content: space-around;
+    gap: 5px;
+}
+
+.flex-item {
+    width: 80px;
+    height: 80px;
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* if there is unused space, let this tem use it 
+flex-grow
+flex-shrink
+flex-basis*/
+    
+.item-10 {
+    flex-grow: 1; 
+    /* flex-basis: 200px; */
+}
+
+.item-9 {
+    flex-grow: 1;
+}
+
+/* .item-4 {
+    flex-grow: 1;
+} */
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  border: solid black 1px;
+  padding: 10px;
+}
+
+.menu {
+  position: sticky;
+  top: 0;
+  background-color: black;
+
+}
+
+a{
+    
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.section-container {
+  display: flex;
+  gap: 15px;
+}
+
+.about-container {
+  position: relative;
+}
+
+.dropdown-container {
+  border: solid white 1px;
+  padding: 10px;
+  display: none;  
+  position: absolute;
+  background-color: black;
+  width: 150px;
+  top: 30px; 
+  transition: display 0.3s ease;
+  /* left: 100px; */
+}
+
+
+.about-container:hover  .dropdown-container {
+  display: block;
+}
+
